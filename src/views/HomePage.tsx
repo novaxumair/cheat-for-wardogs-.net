@@ -41,7 +41,7 @@ const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'Check loader status',
-    text: 'After Wardogs patches we label builds Active or Updating on buywardogscheats.net — load only when Active matches your client.',
+    text: 'After Wardogs patches we label builds Active or Updating on cheatsforwardogs.net — load only when Active matches your client.',
   },
   {
     step: '02',

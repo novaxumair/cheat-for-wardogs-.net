@@ -1,9 +1,10 @@
 import type { FaqItem } from '../data/faqs'
 import {
   OG_IMAGE,
-  PRODUCT_PRICE_USD,
+  PRODUCT_PLANS,
   PRODUCT_SCHEMA_DESCRIPTION,
   SEO_REGIONS,
+  ANTI_CHEAT_NAME,
   ORGANIZATION_ALTERNATE_NAMES,
   SITE_ABOUT,
   SITE_NAME,
@@ -22,16 +23,31 @@ function absoluteAsset(src: string) {
   return src.startsWith('http') ? src : `${SITE_URL}${src.startsWith('/') ? src : `/${src}`}`
 }
 
-function baseOffer(url: string, availability: string) {
+function planOffer(url: string, availability: string, plan: (typeof PRODUCT_PLANS)[number]) {
   return {
     '@type': 'Offer',
     url,
     availability,
-    price: PRODUCT_PRICE_USD,
+    name: plan.label,
+    sku: plan.id,
+    price: plan.priceUsd,
     priceCurrency: 'USD',
     priceValidUntil: '2027-12-31',
     itemCondition: 'https://schema.org/NewCondition',
     seller: { '@id': `${SITE_URL}/#organization` },
+  }
+}
+
+function baseOffer(url: string, availability: string) {
+  return {
+    '@type': 'AggregateOffer',
+    url,
+    availability,
+    lowPrice: PRODUCT_PLANS[0].priceUsd,
+    highPrice: PRODUCT_PLANS[1].priceUsd,
+    priceCurrency: 'USD',
+    offerCount: String(PRODUCT_PLANS.length),
+    offers: PRODUCT_PLANS.map((plan) => planOffer(url, availability, plan)),
   }
 }
 
@@ -154,7 +170,7 @@ export function productDetailJsonLd(status: GameStatus) {
         name: 'Clients',
         value: 'Steam',
       },
-      { '@type': 'PropertyValue', name: 'Anti-cheat', value: 'Elytra Anti-Cheat' },
+      { '@type': 'PropertyValue', name: 'Anti-cheat', value: ANTI_CHEAT_NAME },
       { '@type': 'PropertyValue', name: 'Status', value: status },
     ],
     offers: baseOffer(`${SITE_URL}/wardogs-cheats`, availability),

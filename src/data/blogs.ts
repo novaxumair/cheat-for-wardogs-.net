@@ -33,7 +33,7 @@ export const BLOGS: BlogPost[] = [
       {
         "heading": "What the menu includes",
         "body": [
-          "This thread mirrors the live module list on buywardogscheats.net. Use it to compare aimbot, ESP, vehicle, radar, and misc toggles against what you need in control-zone fights.",
+          "This thread mirrors the live module list on cheatsforwardogs.net. Use it to compare aimbot, ESP, vehicle, radar, and misc toggles against what you need in control-zone fights.",
           "Wardogs runs large lobbies with vehicles and three-team pressure — the feature set focuses on player awareness, transport intel, and optional combat assist rather than loot simulators."
         ]
       },
@@ -61,7 +61,7 @@ export const BLOGS: BlogPost[] = [
       {
         "heading": "1) Confirm status and checkout",
         "body": [
-          "Open buywardogscheats.net and check Active on the product card. When Updating after a Wardogs patch, wait — loading early wastes a session.",
+          "Open cheatsforwardogs.net and check Active on the product card. When Updating after a Wardogs patch, wait — loading early wastes a session.",
           "Plans start from $35 monthly with lifetime options; use only the delivery link from your order email."
         ]
       },
@@ -197,7 +197,7 @@ export const BLOGS: BlogPost[] = [
       {
         "heading": "Status labels",
         "body": [
-          "Active means the loader matches the live client. Updating means wait — check buywardogscheats.net before every session."
+          "Active means the loader matches the live client. Updating means wait — check cheatsforwardogs.net before every session."
         ]
       }
     ]
@@ -235,7 +235,7 @@ export const BLOGS: BlogPost[] = [
       {
         "heading": "Before checkout",
         "body": [
-          "Use buywardogscheats.net for live Active/Updating status. Monthly and lifetime licenses include loader updates when status allows."
+          "Use cheatsforwardogs.net for live Active/Updating status. Monthly and lifetime licenses include loader updates when status allows."
         ]
       }
     ]
@@ -281,9 +281,9 @@ export const BLOGS: BlogPost[] = [
   {
     "slug": "best-wardogs-cheats-review-2026",
     "title": "Wardogs Cheats Review 2026: Features, Safety & Value",
-    "excerpt": "2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on buywardogscheats.net.",
+    "excerpt": "2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on cheatsforwardogs.net.",
     "metaTitle": "Wardogs Cheats Review 2026: Features, Safety & Value | Wardogs Cheats Forum",
-    "metaDescription": "2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on buywardogscheats.net.",
+    "metaDescription": "2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on cheatsforwardogs.net.",
     "searchTerms": "wardogs cheats, buy wardogs cheats, wardogs cheats lifetime",
     "date": "2026-09-14",
     "readMinutes": 8,
@@ -1114,7 +1114,7 @@ export const BLOGS: BlogPost[] = [
       {
         "heading": "Before checkout",
         "body": [
-          "Confirm Active on buywardogscheats.net. If Updating, wait or read refunds policy."
+          "Confirm Active on cheatsforwardogs.net. If Updating, wait or read refunds policy."
         ]
       }
     ]

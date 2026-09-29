@@ -19,7 +19,7 @@ sitemap|urlset {
 }
 
 sitemap|urlset::before {
-  content: "Wardogs Cheats — XML Sitemap\A Indexable pages for Google Search Console (buywardogscheats.net)\A\A Open the raw XML for crawlers; this styled view is for humans only.";
+  content: "Wardogs Cheats — XML Sitemap\A Indexable pages for Google Search Console (cheatsforwardogs.net)\A\A Open the raw XML for crawlers; this styled view is for humans only.";
   display: block;
   white-space: pre-wrap;
   margin-bottom: 24px;

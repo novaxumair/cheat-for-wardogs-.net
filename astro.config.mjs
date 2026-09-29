@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind'
 import { sitemapBrowserViewPlugin } from './scripts/sitemap-browser-view.mjs'
 
 export default defineConfig({
-  site: 'https://buywardogscheats.net',
+  site: 'https://cheatsforwardogs.net',
   output: 'static',
   trailingSlash: 'never',
   compressHTML: true,

@@ -20,10 +20,10 @@ export const POLICY_PAGES: PolicyPageContent[] = [
     path: '/privacy',
     title: 'Privacy Policy | Wardogs Cheats',
     description:
-      'How buywardogscheats.net handles order details, delivery email, support messages and basic site analytics for Wardogs cheats.',
+      'How cheatsforwardogs.net handles order details, delivery email, support messages and basic site analytics for Wardogs cheats.',
     h1: 'Privacy Policy',
     intro:
-      'This page explains what we collect when you browse buywardogscheats.net, buy an Wardogs cheat license, or contact support � and what we do not collect.',
+      'This page explains what we collect when you browse cheatsforwardogs.net, buy an Wardogs cheat license, or contact support � and what we do not collect.',
     sections: [
       {
         heading: 'What we collect',
@@ -45,8 +45,8 @@ export const POLICY_PAGES: PolicyPageContent[] = [
         heading: 'Cookies and third parties',
         body: [
           'Essential cookies may be set by checkout or CDN providers so payment and delivery work.',
-          'Preview media is self-hosted on buywardogscheats.net. Third-party embeds are not used for the main product preview.',
-          'Official Wardogs store links are external. Their privacy policies apply once you leave buywardogscheats.net.',
+          'Preview media is self-hosted on cheatsforwardogs.net. Third-party embeds are not used for the main product preview.',
+          'Official Wardogs store links are external. Their privacy policies apply once you leave cheatsforwardogs.net.',
         ],
       },
       {
@@ -68,7 +68,7 @@ export const POLICY_PAGES: PolicyPageContent[] = [
     path: '/terms',
     title: 'Terms of Use | Wardogs Cheats',
     description:
-      'License rules, age limits, anti-cheat risk, and liability limits for Wardogs cheats on buywardogscheats.net.',
+      'License rules, age limits, anti-cheat risk, and liability limits for Wardogs cheats on cheatsforwardogs.net.',
     h1: 'Terms of Use',
     intro:
       'Buying or running Wardogs cheats means you accept these terms. A license covers personal use of Aimbot, ESP, wallhack, and vehicle radar and misc tools for Wardogs on Windows PC � nothing beyond that.',
@@ -76,14 +76,14 @@ export const POLICY_PAGES: PolicyPageContent[] = [
       {
         heading: 'Acceptance and what a license covers',
         body: [
-          'A key unlocks the current Wardogs cheat build for the duration you purchased (weekly or monthly plans where offered).',
+          'A key unlocks the current Wardogs cheat build for the duration you purchased (monthly or lifetime plans).',
           'Handing the package to someone else, reselling it, sharing accounts, or reverse-engineering the loader breaks these terms and can end your access without a refund.',
         ],
       },
       {
         heading: 'Risk and anti-cheat disclaimer',
         body: [
-          'Wardogs uses anti-cheat and publisher moderation. Using third-party software can violate the game�s terms and lead to account penalties.',
+          'Wardogs uses Elytra Anti-Cheat and publisher moderation. Using third-party software can violate the game’s terms and lead to account penalties.',
           'We push rebuilds after game updates when needed, but nothing here guarantees a build stays compatible forever or that an account stays safe.',
           'All risk sits with you. We accept no liability for bans, lost progress, or other damage tied to using the product. Check Active status before you load.',
         ],
@@ -115,7 +115,7 @@ export const POLICY_PAGES: PolicyPageContent[] = [
     path: '/refunds',
     title: 'Refund Policy | Wardogs Cheats',
     description:
-      'When Wardogs cheat refunds apply for digital licenses, delivery failures, and Updating status windows on buywardogscheats.net.',
+      'When Wardogs cheat refunds apply for digital licenses, delivery failures, and Updating status windows on cheatsforwardogs.net.',
     h1: 'Refund Policy',
     intro:
       'Wardogs cheat licenses are digital goods. This page covers when we can refund, when we cannot, and how to open a request with your order ID.',
@@ -142,7 +142,7 @@ export const POLICY_PAGES: PolicyPageContent[] = [
         body: [
           'Open Support and include: order ID, purchase email, license length, and a short description of the problem (screenshots help).',
           'We aim to reply within one to two business days. Approved refunds go back through the original payment method.',
-          'Buying a short weekly key first is the safest way to confirm the loader fits your PC before a longer plan.',
+          'Starting with a monthly plan is the safest way to confirm the loader fits your PC before upgrading to lifetime.',
         ],
       },
     ],

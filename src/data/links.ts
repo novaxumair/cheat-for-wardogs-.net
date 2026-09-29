@@ -1,4 +1,5 @@
 import { blogPath } from './blog-paths'
+import { CHECKOUT_URL as SITE_CHECKOUT_URL } from './site'
 
 /** Official Wardogs destinations for factual game context. */
 export const OFFICIAL_GAME_LINKS = [
@@ -72,10 +73,9 @@ export const SITE_GUIDE_LINKS = [
 ] as const
 
 /** Outbound checkout (all Get / buy CTAs). */
-export const CHECKOUT_OUTBOUND =
-  'https://zadeyo.com/go/UMAIR?to=%2Fproducts%2Fwardogs'
+export const CHECKOUT_OUTBOUND = SITE_CHECKOUT_URL
 
-export const CHECKOUT_URL = CHECKOUT_OUTBOUND
+export const CHECKOUT_URL = SITE_CHECKOUT_URL
 
 export function getCheckoutUrl(_productSlug?: string): string {
   return CHECKOUT_OUTBOUND

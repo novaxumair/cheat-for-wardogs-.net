@@ -10,7 +10,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = join(root, 'public')
 const dataDir = join(root, 'src', 'data')
 const pagesDir = join(root, 'src', 'pages')
-const SITE = (process.env.SITE_URL || 'https://buywardogscheats.net').replace(/\/$/, '')
+const SITE = (process.env.SITE_URL || 'https://cheatsforwardogs.net').replace(/\/$/, '')
 const TODAY = new Date().toLocaleDateString('en-CA')
 
 const HERO_FULL = '/media/wd-hero-full.webp'
@@ -180,7 +180,7 @@ function imagesForPath(path, games, forums) {
       {
         src: BOX,
         title: 'Wardogs ESP Gameplay Screenshot',
-        caption: 'Steam gameplay with player ESP overlays on buywardogscheats.net.',
+        caption: 'Steam gameplay with player ESP overlays on cheatsforwardogs.net.',
       },
     ]
   }
@@ -245,7 +245,7 @@ function imagesForPath(path, games, forums) {
         title: `${forum?.title || slug} Open Graph`,
         caption:
           forum?.metaDescription ||
-          `Google preview image for ${forum?.title || slug} on buywardogscheats.net.`,
+          `Google preview image for ${forum?.title || slug} on cheatsforwardogs.net.`,
       },
       {
         src: FORUM_IMAGES[slug] || MENU,
@@ -289,7 +289,7 @@ function imagesForPath(path, games, forums) {
       {
         src: '/og/privacy.jpg',
         title: 'Wardogs Cheats Privacy Policy',
-        caption: 'Privacy policy preview for buywardogscheats.net orders and support.',
+        caption: 'Privacy policy preview for cheatsforwardogs.net orders and support.',
       },
     ]
   }
@@ -438,8 +438,8 @@ function validate(games, forums, allPaths, sitemap) {
   if (/Tarkov|tarkovcheats|EFT Reaper|Warzone|warzonecheats|Ricochet/i.test(sitemap)) {
     errors.push('Sitemap still contains legacy Tarkov/Warzone labels')
   }
-  if (!sitemap.includes('buywardogscheats.net')) {
-    errors.push('Sitemap must target buywardogscheats.net')
+  if (!sitemap.includes('cheatsforwardogs.net')) {
+    errors.push('Sitemap must target cheatsforwardogs.net')
   }
   if (/tarkovcheats|warzonecheats|buywardogscheat\.com|zadeyo|arena breakout/i.test(sitemap)) {
     errors.push('Sitemap contains legacy or third-party branding')

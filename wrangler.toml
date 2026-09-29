@@ -3,6 +3,6 @@
 # Deploy command in dashboard: leave EMPTY (Pages uploads dist automatically),
 # or set to: npm run deploy:pages
 # Deploy command may stay `npx wrangler deploy` — postinstall shim routes it to Pages deploy.
-name = "buywardogscheats"
+name = "cheatsforwardogs"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "./dist"

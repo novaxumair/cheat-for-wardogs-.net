@@ -1,7 +1,7 @@
 # Optional Workers deploy: npm run deploy (after npm run build)
-# WARNING: Do not attach this worker to buywardogscheats.net while Cloudflare Pages
+# WARNING: Do not attach this worker to cheatsforwardogs.net while Cloudflare Pages
 # serves the site — a Worker on the same hostname breaks sitemap fetch in Search Console.
-name = "buywardogscheats"
+name = "cheatsforwardogs"
 compatibility_date = "2024-09-23"
 main = "workers/site.js"
 

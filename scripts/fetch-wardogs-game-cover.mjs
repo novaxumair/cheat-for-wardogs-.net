@@ -18,13 +18,14 @@ await mkdir(mediaDir, { recursive: true })
 await mkdir(brandDir, { recursive: true })
 
 const res = await fetch(IGN_COVER, {
-  headers: { 'User-Agent': 'Mozilla/5.0 (compatible; buywardogscheats.net asset script)' },
+  headers: { 'User-Agent': 'Mozilla/5.0 (compatible; cheatsforwardogs.net asset script)' },
 })
 if (!res.ok) throw new Error(`IGN download failed: ${res.status}`)
 const buf = Buffer.from(await res.arrayBuffer())
 writeFileSync(join(brandDir, 'wardogs-ign-cover.jpg'), buf)
 
 await sharp(buf)
+  .resize(1440, 1440, { fit: 'cover', position: 'centre' })
   .webp({ quality: 95, effort: 6, smartSubsample: false })
   .toFile(join(mediaDir, 'wd-game-cover.webp'))
 

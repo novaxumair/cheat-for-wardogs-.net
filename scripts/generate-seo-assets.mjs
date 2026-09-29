@@ -1,7 +1,7 @@
 /**
  * Builds 1200x630 OG JPEGs and per-forum OG images from first-party screenshots.
  */
-import { existsSync, mkdirSync, readFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
@@ -22,7 +22,7 @@ async function ogFrom(src, outName, title) {
   const input = existsSync(src) ? src : cover
   await sharp(input)
     .resize(1200, 630, { fit: 'cover', position: 'centre' })
-    .jpeg({ quality: 86, mozjpeg: true })
+    .jpeg({ quality: 92, mozjpeg: true })
     .toFile(join(ogDir, outName))
   return title
 }
@@ -57,4 +57,14 @@ for (const forum of forums) {
   await ogFrom(src, `forums-${forum.slug}.jpg`, forum.title)
 }
 
-console.log(`OG images: ${pages.length} pages + ${forums.length} forum threads`)
+const keep = new Set(pages.map(([name]) => name))
+for (const forum of forums) keep.add(`forums-${forum.slug}.jpg`)
+
+let removed = 0
+for (const f of readdirSync(ogDir)) {
+  if (!f.endsWith('.jpg') || keep.has(f)) continue
+  unlinkSync(join(ogDir, f))
+  removed++
+}
+
+console.log(`OG images: ${pages.length} pages + ${forums.length} forum threads (${removed} stale removed)`)

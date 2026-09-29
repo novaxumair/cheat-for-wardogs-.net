@@ -6,7 +6,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-const HOST = 'buywardogscheats.net'
+const HOST = 'cheatsforwardogs.net'
 
 const POSTS = [
   {
@@ -252,7 +252,7 @@ const POSTS = [
     intent: 'commercial',
     kw: 'wardogs cheats, buy wardogs cheats, wardogs cheats lifetime',
     excerpt:
-      '2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on buywardogscheats.net.',
+      '2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on cheatsforwardogs.net.',
     sections: [
       {
         heading: 'What we compared',

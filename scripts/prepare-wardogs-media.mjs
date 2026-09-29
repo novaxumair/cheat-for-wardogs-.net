@@ -2,15 +2,20 @@
  * Builds public/media from Cursor assets (images_1 … images_N).
  * Preserves native resolution; WebP/JPEG at high quality only (no aggressive downscale).
  */
-import { mkdir, readdir, unlink } from 'node:fs/promises'
+import { copyFile, mkdir, readdir, unlink } from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..')
 const assetsDir =
-  'C:/Users/Bader/.cursor/projects/c-Users-Bader-Desktop-test-buy-wardogs-cheats-net/assets'
+  process.env.WARDOGS_ASSETS_DIR ??
+  join(
+    process.env.USERPROFILE ?? '',
+    '.cursor/projects/c-Users-Bader-Desktop-test-cheats-for-wardogs-net/assets',
+  )
 const mediaDir = join(root, 'public', 'media')
+const brandDir = join(root, 'public', 'brand')
 
 const WEBP_OPTS = { quality: 95, effort: 6, smartSubsample: false }
 const JPEG_OPTS = { quality: 94, mozjpeg: true }
@@ -54,9 +59,23 @@ for (const { n, f } of shots) {
   await toWebp(join(assetsDir, f), join(mediaDir, `wd-screenshot-${n}.webp`))
 }
 
+const SCREENSHOT_COUNT = 10
+const written = new Set(shots.map((s) => s.n))
+for (let n = 1; n <= SCREENSHOT_COUNT; n++) {
+  if (written.has(n)) continue
+  const donorN = n === 9 ? 8 : (written.has(8) ? 8 : shots[0].n)
+  const donor = join(mediaDir, `wd-screenshot-${donorN}.webp`)
+  const out = join(mediaDir, `wd-screenshot-${n}.webp`)
+  await copyFile(donor, out)
+  console.warn(`Filled wd-screenshot-${n}.webp (no images_${n} asset) from`, donor)
+}
+
+await mkdir(brandDir, { recursive: true })
+
 // Hero banner + product cover (best wide frames)
 await toWebp(pick(6), join(mediaDir, 'wd-hero-full.webp'), HERO_MAX_W)
 await toWebp(pick(4), join(mediaDir, 'wd-cover.webp'), COVER_MAX_W)
+// Store card art: IGN key art — run `npm run fetch:game-cover` (do not overwrite with screenshots).
 await sharp(pick(1))
   .resize(COVER_MAX_W, null, { fit: 'inside', withoutEnlargement: true })
   .jpeg(JPEG_OPTS)

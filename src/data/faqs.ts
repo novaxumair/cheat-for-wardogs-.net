@@ -3,15 +3,15 @@ export type FaqItem = { q: string; a: string }
 export const HOME_FAQS: FaqItem[] = [
   {
     q: 'What are Wardogs cheats?',
-    a: 'Wardogs cheats on buywardogscheats.net are PC tools with aimbot, player ESP, vehicle ESP, 2D radar, and misc options — with Active or Updating loader status after game patches.',
+    a: 'Wardogs cheats on cheatsforwardogs.net are PC tools with aimbot, player ESP, vehicle ESP, 2D radar, and misc options — with Active or Updating loader status after game patches.',
   },
   {
     q: 'How much do Wardogs cheats cost?',
-    a: 'Wardogs cheats start at $35 for monthly access (30 days). Lifetime access is $150. Confirm Active status and pricing on buywardogscheats.net before checkout.',
+    a: 'Wardogs cheats start at $35 for monthly access (30 days). Lifetime access is $150. Confirm Active status and pricing on cheatsforwardogs.net before checkout.',
   },
   {
     q: 'Do you sell tools for other games?',
-    a: 'No. buywardogscheats.net covers Wardogs only — one product, no multi-game catalog.',
+    a: 'No. cheatsforwardogs.net covers Wardogs only — one product, no multi-game catalog.',
   },
   {
     q: 'Is aimbot required?',
@@ -19,7 +19,11 @@ export const HOME_FAQS: FaqItem[] = [
   },
   {
     q: 'How do you handle game patches?',
-    a: 'We publish Active or Updating labels after Wardogs updates. Elytra Anti-Cheat and game builds change — always check status on buywardogscheats.net before you load.',
+    a: 'We publish Active or Updating labels after Wardogs updates. Elytra Anti-Cheat and game builds change — always check status on cheatsforwardogs.net before you load.',
+  },
+  {
+    q: 'What is Wardogs anti cheat?',
+    a: 'Wardogs on PC uses Elytra Anti-Cheat. We track loader compatibility after patches and label builds Active or Updating on cheatsforwardogs.net — load only when status matches your client.',
   },
   {
     q: 'What is Wardogs ESP?',

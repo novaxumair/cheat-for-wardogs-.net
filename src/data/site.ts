@@ -1,9 +1,16 @@
 import { WD_OG } from './images'
 import { PAGE_OG } from './og'
 
-export const SITE_URL = 'https://buywardogscheats.net'
+export const SITE_URL = 'https://cheatsforwardogs.net'
 export const SITE_NAME = 'Wardogs Cheats'
-export const SITE_HOST = 'buywardogscheats.net'
+export const SITE_HOST = 'cheatsforwardogs.net'
+
+export const SITE_LOCALE = 'en'
+export const SITE_MARKET = 'Worldwide'
+export const GAME_NAME = 'Wardogs'
+export const ANTI_CHEAT_NAME = 'Elytra Anti-Cheat'
+export const CHECKOUT_URL =
+  'https://zadeyo.com/go/UMAIR?to=%2Fproducts%2Fwardogs'
 
 /** Stable site identity — Organization, WebSite, and about copy (not per-route). */
 export const SITE_PURPOSE =
@@ -23,15 +30,15 @@ export const SITE_ABOUT = [
 export const ORGANIZATION_ALTERNATE_NAMES = [
   'Wardogs Cheats',
   'Wardogs cheats',
-  'buywardogscheats',
-  'buywardogscheats.net',
+  'cheatsforwardogs',
+  'cheatsforwardogs.net',
 ] as const
 
 /**
  * Short intent-specific terms per main route (3–6 each). Not rendered as meta keywords.
  */
 export const SEO_ROUTE_INTENTS = {
-  home: ['wardogs cheats', 'Wardogs aimbot', 'Wardogs ESP', 'Wardogs radar'],
+  home: ['Wardogs cheats', 'wardogs cheats', 'Wardogs aimbot', 'Wardogs ESP', 'wardogs anti cheat'],
   product: ['wardogs cheats', 'Wardogs features', 'Wardogs store', 'Wardogs setup'],
   featuresHub: ['Wardogs cheat features', 'Wardogs aimbot', 'Wardogs vehicle ESP'],
   reviews: ['Wardogs Cheats reviews', 'Wardogs buyer feedback'],
@@ -47,6 +54,16 @@ export const PRODUCT_SCHEMA_DESCRIPTION =
 export const PRODUCT_PRICE_USD = '35'
 
 export const PRODUCT_LIFETIME_PRICE_USD = '150'
+
+export const PRODUCT_PLANS = [
+  { id: 'monthly', label: 'Monthly', priceUsd: PRODUCT_PRICE_USD, duration: 'P30D' },
+  {
+    id: 'lifetime',
+    label: 'Lifetime',
+    priceUsd: PRODUCT_LIFETIME_PRICE_USD,
+    duration: 'P99Y',
+  },
+] as const
 
 export const SEO_REGIONS = [
   { hreflang: 'en', label: 'English' },
