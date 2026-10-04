@@ -25,3 +25,5 @@ After deploy, run `npm run verify:live-sitemap` and in [Google Search Console](h
 | **Deploy command** | **Leave empty** (recommended), `npm run deploy:pages`, or `npx wrangler deploy` (shimmed to Pages deploy after `npm ci`) |
 
 Optional standalone Worker: `npm run deploy:worker` (see `wrangler.worker.toml`).
+
+**Domain redirects:** `public/_redirects` supports **path-only** rules. Point `cheatsforwardogs.net` and `www.cheatforwardogs.net` at this Pages project in the dashboard, then add **Bulk Redirects** (or DNS + custom domains) for apex/`www` and the legacy `cheatsforwardogs.net` hostnames.

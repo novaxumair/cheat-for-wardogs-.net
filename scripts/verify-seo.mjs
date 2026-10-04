@@ -284,8 +284,6 @@ if (!existsSync(join(dist, 'sitemap'))) fail('dist/sitemap is missing (extension
 const sitemapPlain = readFileSync(join(dist, 'sitemap'), 'utf8')
 if (sitemapPlain !== sitemap) fail('/sitemap and /sitemap.xml must be identical')
 if (!existsSync(join(dist, 'robots.txt'))) fail('dist/robots.txt is missing')
-if (!existsSync(join(dist, '_routes.json'))) fail('dist/_routes.json is missing')
-
 const robots = readFileSync(join(dist, 'robots.txt'), 'utf8')
 if (!robots.includes('Sitemap: https://cheatforwardogs.net/sitemap')) {
   fail('robots.txt must point at the canonical HTTPS sitemap (/sitemap)')
@@ -306,21 +304,14 @@ if (!robots.includes('User-agent: Googlebot')) {
   fail('robots.txt must explicitly allow Googlebot')
 }
 
-const routes = JSON.parse(readFileSync(join(dist, '_routes.json'), 'utf8'))
-if (routes.include?.includes('/sitemap') || routes.include?.includes('/sitemap.xml')) {
-  fail('_routes.json must not route sitemap URLs through Pages Functions (static dist + _headers for GSC)')
+if (existsSync(join(dist, '_routes.json'))) {
+  fail('dist/_routes.json must not be published (static sitemap only; no Pages Functions)')
 }
-for (const fn of ['functions/sitemap.js', 'functions/sitemap.xml.js']) {
-  const src = readFileSync(join(root, fn), 'utf8')
-  if (!src.includes('application/xml; charset=utf-8')) {
-    fail(`${fn} must return application/xml for Google Search Console`)
-  }
-  if (!src.includes('SITEMAP_XML')) fail(`${fn} missing embedded sitemap payload`)
+if (existsSync(join(root, 'functions'))) {
+  fail('Remove repo /functions — Cloudflare Pages requires _routes include rules when Functions exist')
 }
-for (const fn of ['dist/functions/sitemap.js', 'dist/functions/sitemap.xml.js']) {
-  if (!existsSync(join(root, fn))) {
-    fail(`${fn} missing — required when deploying with wrangler pages deploy dist`)
-  }
+if (existsSync(join(dist, 'functions'))) {
+  fail('dist/functions must not be published')
 }
 
 for (const asset of [
@@ -337,7 +328,6 @@ for (const asset of [
   'public/media/wd-screenshot-1.webp',
   'public/videos/hero.webm',
   'public/sitemap.css',
-  'public/_routes.json',
 ]) {
   if (!existsSync(join(root, asset))) fail(`Missing first-party asset: ${asset}`)
 }
@@ -358,8 +348,8 @@ if (!redirects.includes('/buy-wardogs-cheats')) {
 if (!redirects.includes('/abi-cheats')) {
   fail('_redirects must map legacy /abi-cheats to /wardogs-cheats')
 }
-if (!redirects.includes('cheatsforwardogs.net')) {
-  fail('_redirects must 301 legacy cheatsforwardogs.net hostname to cheatforwardogs.net')
+if (/^https?:\/\//m.test(redirects.split('\n').filter((l) => l.trim() && !l.trim().startsWith('#')).map((l) => l.trim().split(/\s+/)[0] ?? '').join('\n'))) {
+  fail('_redirects must use relative paths only (hostname redirects go in Cloudflare Bulk Redirects)')
 }
 if (/^\/wardogs-cheats\s+\/wardogs-cheats\s/m.test(redirects)) {
   fail('_redirects must not 301 /wardogs-cheats to itself (redirect loop)')
