@@ -75,6 +75,10 @@
 /blog/:slug/    /forums/:slug  301
 /blog/:slug     /forums/:slug  301
 
+# Canonical sitemap URL for Google Search Console
+/sitemap       /sitemap.xml  301
+/sitemap/      /sitemap.xml  301
+
 # Alternate sitemap URLs
 /sitemap-pages.xml     /sitemap.xml  301
 /sitemap-products.xml  /sitemap.xml  301

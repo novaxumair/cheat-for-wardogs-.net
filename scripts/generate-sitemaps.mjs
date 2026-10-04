@@ -475,13 +475,13 @@ function main() {
 
   const sitemapPaths = [
     join(publicDir, 'sitemap.xml'),
-    join(publicDir, 'sitemap'),
-    ...(existsSync(join(root, 'dist'))
-      ? [join(root, 'dist', 'sitemap.xml'), join(root, 'dist', 'sitemap')]
-      : []),
+    ...(existsSync(join(root, 'dist')) ? [join(root, 'dist', 'sitemap.xml')] : []),
   ]
   for (const path of sitemapPaths) {
     writeFileSync(path, sitemap, 'utf8')
+  }
+  for (const stale of [join(publicDir, 'sitemap'), join(root, 'dist', 'sitemap')]) {
+    if (existsSync(stale)) unlinkSync(stale)
   }
   removePagesFunctionsArtifacts()
   const distDir = join(root, 'dist')
@@ -526,7 +526,6 @@ function main() {
       'Disallow: /404',
       'Disallow: /404.html',
       '',
-      `Sitemap: ${siteUrl('/sitemap')}`,
       `Sitemap: ${siteUrl('/sitemap.xml')}`,
       '',
     ].join('\n'),
@@ -553,10 +552,10 @@ function main() {
   }
 
   console.log(
-    `Sitemap OK: ${allPaths.length} pages at ${siteUrl('/sitemap')} (static dist + _headers)`,
+    `Sitemap OK: ${allPaths.length} pages at ${siteUrl('/sitemap.xml')} (static dist + _headers)`,
   )
   console.log(
-    `GSC: delete old sitemap entry, then submit ${siteUrl('/sitemap')} after deploy completes.`,
+    `GSC: remove old sitemap entries, then submit only ${siteUrl('/sitemap.xml')} on the cheatforwardogs.net property.`,
   )
 }
 

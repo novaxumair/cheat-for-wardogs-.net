@@ -263,6 +263,9 @@ for (const block of urlBlocks) {
 if (!sitemap.trimStart().startsWith('<?xml version="1.0" encoding="UTF-8"?>')) {
   fail('sitemap.xml must start with an XML declaration')
 }
+if (sitemap.charCodeAt(0) === 0xfeff) {
+  fail('sitemap.xml must not start with UTF-8 BOM (GSC XML parse errors)')
+}
 if (sitemap.includes('xmlns:xhtml=') || sitemap.includes('hreflang=')) {
   fail('sitemap.xml must not duplicate hreflang entries (single-locale site; use HTML link tags)')
 }
@@ -280,16 +283,16 @@ for (const stale of [
 }
 
 if (!existsSync(join(dist, 'sitemap.xml'))) fail('dist/sitemap.xml is missing')
-if (!existsSync(join(dist, 'sitemap'))) fail('dist/sitemap is missing (extensionless URL for Google)')
-const sitemapPlain = readFileSync(join(dist, 'sitemap'), 'utf8')
-if (sitemapPlain !== sitemap) fail('/sitemap and /sitemap.xml must be identical')
+if (existsSync(join(dist, 'sitemap'))) {
+  fail('dist/sitemap must not exist — use /sitemap.xml only (301 /sitemap in _redirects)')
+}
 if (!existsSync(join(dist, 'robots.txt'))) fail('dist/robots.txt is missing')
 const robots = readFileSync(join(dist, 'robots.txt'), 'utf8')
-if (!robots.includes('Sitemap: https://cheatforwardogs.net/sitemap')) {
-  fail('robots.txt must point at the canonical HTTPS sitemap (/sitemap)')
-}
 if (!robots.includes('Sitemap: https://cheatforwardogs.net/sitemap.xml')) {
-  fail('robots.txt must also list /sitemap.xml for Search Console submissions')
+  fail('robots.txt must list exactly one Sitemap: https://cheatforwardogs.net/sitemap.xml')
+}
+if (/Sitemap:\s*https:\/\/cheatforwardogs\.net\/sitemap\s*$/m.test(robots)) {
+  fail('robots.txt must not list extensionless /sitemap (GSC: submit sitemap.xml only)')
 }
 if (!robots.includes('Allow: /sitemap')) {
   fail('robots.txt must explicitly allow /sitemap')
@@ -338,6 +341,9 @@ if (existsSync(join(root, 'public/videos/dayz-preview.mp4'))) {
 const redirects = readFileSync(join(root, 'public', '_redirects'), 'utf8')
 if (!redirects.includes('/sitemap-pages.xml')) {
   fail('_redirects missing legacy sitemap -> /sitemap.xml redirects')
+}
+if (!/^\/sitemap\s+\/sitemap\.xml\s+301/m.test(redirects)) {
+  fail('_redirects must 301 /sitemap -> /sitemap.xml for Search Console')
 }
 if (!redirects.includes('/sitemap-index.xml')) {
   fail('_redirects missing sitemap-index.xml -> /sitemap.xml redirect')
