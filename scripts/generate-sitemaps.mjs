@@ -475,13 +475,13 @@ function main() {
 
   const sitemapPaths = [
     join(publicDir, 'sitemap.xml'),
-    ...(existsSync(join(root, 'dist')) ? [join(root, 'dist', 'sitemap.xml')] : []),
+    join(publicDir, 'sitemap'),
+    ...(existsSync(join(root, 'dist'))
+      ? [join(root, 'dist', 'sitemap.xml'), join(root, 'dist', 'sitemap')]
+      : []),
   ]
   for (const path of sitemapPaths) {
     writeFileSync(path, sitemap, 'utf8')
-  }
-  for (const stale of [join(publicDir, 'sitemap'), join(root, 'dist', 'sitemap')]) {
-    if (existsSync(stale)) unlinkSync(stale)
   }
   removePagesFunctionsArtifacts()
   const distDir = join(root, 'dist')

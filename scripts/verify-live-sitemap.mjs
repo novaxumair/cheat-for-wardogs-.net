@@ -37,9 +37,6 @@ function assertXmlSitemap(body, label) {
   if (body.includes('cheatsforwardogs.net')) {
     fail(`${label}: still lists legacy cheatsforwardogs.net URLs`)
   }
-  if (body.includes('<changefreq>') || body.includes('<priority>')) {
-    warn(`${label}: changefreq/priority are optional; plain loc+lastmod is preferred for GSC`)
-  }
 
   const locs = [...body.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
   if (locs.length < 10) fail(`${label}: expected many <loc> entries, found ${locs.length}`)
@@ -52,27 +49,11 @@ function assertXmlSitemap(body, label) {
   if (blocks.length !== locs.length) {
     fail(`${label}: malformed <url> blocks (${blocks.length} blocks, ${locs.length} locs)`)
   }
+  return body
 }
 
-async function checkSitemapXml() {
-  const url = `${SITE}/sitemap.xml`
-  const res = await fetch(url, {
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-    },
-    redirect: 'follow',
-  })
-  if (res.status !== 200) fail(`${url}: expected HTTP 200, got ${res.status}`)
-  const type = res.headers.get('content-type') || ''
-  if (!type.toLowerCase().includes('xml')) {
-    fail(`${url}: Content-Type must include xml (got ${type || 'none'})`)
-  }
-  assertXmlSitemap(await res.text(), url)
-}
-
-async function checkSitemapRedirect() {
-  const url = `${SITE}/sitemap`
+async function fetchSitemapPath(path) {
+  const url = `${SITE}${path}`
   const res = await fetch(url, {
     headers: {
       'User-Agent':
@@ -80,24 +61,30 @@ async function checkSitemapRedirect() {
     },
     redirect: 'manual',
   })
-  if (res.status !== 301 && res.status !== 308) {
-    fail(`${url}: expected 301 to /sitemap.xml, got ${res.status}`)
+  if (res.status !== 200) {
+    fail(`${url}: expected HTTP 200 (static XML), got ${res.status} — do not 301 /sitemap`)
+    return null
   }
-  const location = res.headers.get('location') || ''
-  if (!location.includes('/sitemap.xml')) {
-    fail(`${url}: Location must point to /sitemap.xml (got ${location || 'none'})`)
+  const type = res.headers.get('content-type') || ''
+  if (!type.toLowerCase().includes('xml')) {
+    fail(`${url}: Content-Type must include xml (got ${type || 'none'})`)
   }
+  return assertXmlSitemap(await res.text(), url)
 }
 
 async function checkRobots() {
   const res = await fetch(`${SITE}/robots.txt`, { redirect: 'follow' })
   if (!res.ok) fail(`robots.txt: HTTP ${res.status}`)
   const body = await res.text()
+  const sitemapLines = body.match(/^Sitemap:\s*(.+)$/gm) || []
+  if (sitemapLines.length !== 1) {
+    fail(`robots.txt must declare exactly one Sitemap line (found ${sitemapLines.length})`)
+  }
   if (!body.includes(`Sitemap: ${SITE}/sitemap.xml`)) {
     fail('robots.txt must declare Sitemap: .../sitemap.xml')
   }
   if (/Sitemap:\s*https:\/\/cheatforwardogs\.net\/sitemap\s*$/m.test(body)) {
-    fail('robots.txt must not declare extensionless /sitemap')
+    fail('robots.txt must not list extensionless Sitemap: .../sitemap (use sitemap.xml only)')
   }
 }
 
@@ -117,8 +104,11 @@ async function checkLegacyHost() {
 }
 
 try {
-  await checkSitemapXml()
-  await checkSitemapRedirect()
+  const xmlBody = await fetchSitemapPath('/sitemap.xml')
+  const plainBody = await fetchSitemapPath('/sitemap')
+  if (xmlBody && plainBody && xmlBody !== plainBody) {
+    fail('/sitemap and /sitemap.xml must return identical XML bodies')
+  }
   await checkRobots()
   await checkLegacyHost()
 } catch (err) {

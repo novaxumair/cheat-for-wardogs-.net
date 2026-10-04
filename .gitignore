@@ -27,3 +27,7 @@ dist-ssr
 
 .tmp-chrome-debug/
 
+# Pages Functions break deploy unless _routes.json has include rules — sitemap is static only
+/functions/
+public/_routes.json
+

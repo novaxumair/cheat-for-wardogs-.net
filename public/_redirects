@@ -75,9 +75,7 @@
 /blog/:slug/    /forums/:slug  301
 /blog/:slug     /forums/:slug  301
 
-# Canonical sitemap URL for Google Search Console
-/sitemap       /sitemap.xml  301
-/sitemap/      /sitemap.xml  301
+# /sitemap and /sitemap.xml are both static XML files (no redirect — GSC rejects relative Location)
 
 # Alternate sitemap URLs
 /sitemap-pages.xml     /sitemap.xml  301
