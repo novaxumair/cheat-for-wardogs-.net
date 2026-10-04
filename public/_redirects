@@ -1,3 +1,12 @@
+# Legacy hostname → canonical apex (cheatsforwardogs.net → cheatforwardogs.net)
+https://cheatsforwardogs.net/*       https://cheatforwardogs.net/:splat  301
+http://cheatsforwardogs.net/*        https://cheatforwardogs.net/:splat  301
+https://www.cheatsforwardogs.net/*   https://cheatforwardogs.net/:splat  301
+http://www.cheatsforwardogs.net/*    https://cheatforwardogs.net/:splat  301
+http://cheatforwardogs.net/*         https://cheatforwardogs.net/:splat  301
+https://www.cheatforwardogs.net/*    https://cheatforwardogs.net/:splat  301
+http://www.cheatforwardogs.net/*     https://cheatforwardogs.net/:splat  301
+
 # Checkout (302 — not indexed as site content; see CheckoutLink)
 /checkout  https://zadeyo.com/go/UMAIR?to=%2Fproducts%2Fwardogs  302
 

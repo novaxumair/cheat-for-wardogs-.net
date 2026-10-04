@@ -1,5 +1,5 @@
 /**
- * Ensures the site remains Wardogs-only (cheatsforwardogs.net) in source and built HTML.
+ * Ensures the site remains Wardogs-only (cheatforwardogs.net) in source and built HTML.
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join, relative } from 'node:path'
@@ -75,15 +75,15 @@ if (existsSync(dist)) {
         failures.push(`dist ${relative(dist, file)}: matched ${re}`)
       }
     }
-    if (REDIRECT_ONLY.test(html) && !html.includes('cheatsforwardogs.net')) {
+    if (REDIRECT_ONLY.test(html) && !html.includes('cheatforwardogs.net')) {
       failures.push(`dist ${relative(dist, file)}: legacy game slug in HTML`)
     }
   }
 }
 
 const siteTs = readFileSync(join(root, 'src', 'data', 'site.ts'), 'utf8')
-if (!siteTs.includes('cheatsforwardogs.net')) {
-  failures.push('site.ts must use cheatsforwardogs.net')
+if (!siteTs.includes('cheatforwardogs.net')) {
+  failures.push('site.ts must use cheatforwardogs.net')
 }
 if (!siteTs.includes('Wardogs Cheats')) {
   failures.push('site.ts must use Wardogs Cheats brand')
@@ -100,4 +100,4 @@ if (failures.length) {
   throw new Error(`Single-game verification failed:\n- ${failures.join('\n- ')}`)
 }
 
-console.log('Single-game verification passed (Wardogs / cheatsforwardogs.net only)')
+console.log('Single-game verification passed (Wardogs / cheatforwardogs.net only)')

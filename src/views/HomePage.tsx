@@ -5,7 +5,13 @@ import { FaqSection } from '../components/FaqSection'
 import { guidePath } from '../data/games'
 import { CheckoutLink } from '../components/CheckoutLink'
 import { HOME_FAQS } from '../data/faqs'
-import { HOME_HEADINGS, PRODUCT_LIFETIME_PRICE_USD, PRODUCT_PRICE_USD, SITE_NAME } from '../data/site'
+import {
+  HOME_HEADINGS,
+  PRODUCT_LIFETIME_PRICE_USD,
+  PRODUCT_PRICE_USD,
+  SITE_HOST,
+  SITE_NAME,
+} from '../data/site'
 import { blogPath } from '../data/blogs'
 import { FORUM_INDEX } from '../data/forum-index'
 import { REVIEWS } from '../data/reviews'
@@ -41,7 +47,7 @@ const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'Check loader status',
-    text: 'After Wardogs patches we label builds Active or Updating on cheatsforwardogs.net — load only when Active matches your client.',
+    text: `After Wardogs patches we label builds Active or Updating on ${SITE_HOST} — load only when Active matches your client.`,
   },
   {
     step: '02',

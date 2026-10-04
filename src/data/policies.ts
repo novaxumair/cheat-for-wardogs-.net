@@ -20,10 +20,10 @@ export const POLICY_PAGES: PolicyPageContent[] = [
     path: '/privacy',
     title: 'Privacy Policy | Wardogs Cheats',
     description:
-      'How cheatsforwardogs.net handles order details, delivery email, support messages and basic site analytics for Wardogs cheats.',
+      'How cheatforwardogs.net handles order details, delivery email, support messages and basic site analytics for Wardogs cheats.',
     h1: 'Privacy Policy',
     intro:
-      'This page explains what we collect when you browse cheatsforwardogs.net, buy an Wardogs cheat license, or contact support � and what we do not collect.',
+      'This page explains what we collect when you browse cheatforwardogs.net, buy an Wardogs cheat license, or contact support � and what we do not collect.',
     sections: [
       {
         heading: 'What we collect',
@@ -45,8 +45,8 @@ export const POLICY_PAGES: PolicyPageContent[] = [
         heading: 'Cookies and third parties',
         body: [
           'Essential cookies may be set by checkout or CDN providers so payment and delivery work.',
-          'Preview media is self-hosted on cheatsforwardogs.net. Third-party embeds are not used for the main product preview.',
-          'Official Wardogs store links are external. Their privacy policies apply once you leave cheatsforwardogs.net.',
+          'Preview media is self-hosted on cheatforwardogs.net. Third-party embeds are not used for the main product preview.',
+          'Official Wardogs store links are external. Their privacy policies apply once you leave cheatforwardogs.net.',
         ],
       },
       {
@@ -68,7 +68,7 @@ export const POLICY_PAGES: PolicyPageContent[] = [
     path: '/terms',
     title: 'Terms of Use | Wardogs Cheats',
     description:
-      'License rules, age limits, anti-cheat risk, and liability limits for Wardogs cheats on cheatsforwardogs.net.',
+      'License rules, age limits, anti-cheat risk, and liability limits for Wardogs cheats on cheatforwardogs.net.',
     h1: 'Terms of Use',
     intro:
       'Buying or running Wardogs cheats means you accept these terms. A license covers personal use of Aimbot, ESP, wallhack, and vehicle radar and misc tools for Wardogs on Windows PC � nothing beyond that.',
@@ -115,7 +115,7 @@ export const POLICY_PAGES: PolicyPageContent[] = [
     path: '/refunds',
     title: 'Refund Policy | Wardogs Cheats',
     description:
-      'When Wardogs cheat refunds apply for digital licenses, delivery failures, and Updating status windows on cheatsforwardogs.net.',
+      'When Wardogs cheat refunds apply for digital licenses, delivery failures, and Updating status windows on cheatforwardogs.net.',
     h1: 'Refund Policy',
     intro:
       'Wardogs cheat licenses are digital goods. This page covers when we can refund, when we cannot, and how to open a request with your order ID.',

@@ -1,8 +1,8 @@
-# Wardogs Cheats (cheatsforwardogs.net)
+# Wardogs Cheats (cheatforwardogs.net)
 
 Static Astro site for **Wardogs Cheats** on Windows PC — aimbot, ESP, vehicle tracking, 2D radar, and loader status. Single-game only; Cloudflare Pages / Workers ready.
 
-SEO targets **Wardogs cheats**, **wardogs anti cheat**, **Wardogs ESP**, **Wardogs aimbot**, and related Wardogs PC keywords on `https://cheatsforwardogs.net`.
+SEO targets **Wardogs cheats**, **wardogs anti cheat**, **Wardogs ESP**, **Wardogs aimbot**, and related Wardogs PC keywords on `https://cheatforwardogs.net`.
 
 ## Commands
 
@@ -12,7 +12,7 @@ SEO targets **Wardogs cheats**, **wardogs anti cheat**, **Wardogs ESP**, **Wardo
 - `npm run prepare:media` — rebuild gameplay WebP assets
 - `npm run fetch:game-cover` — refresh hosted WARDOGS key art
 
-Set `SITE_URL=https://cheatsforwardogs.net` when generating sitemaps outside the default build.
+Set `SITE_URL=https://cheatforwardogs.net` when generating sitemaps outside the default build.
 
 ## Cloudflare Pages (Git)
 

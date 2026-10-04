@@ -16,7 +16,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Features thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Features thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "IT_guy_gaming",
@@ -28,7 +28,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-17",
-      "body": "@IT_guy_gaming — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@IT_guy_gaming — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "IT_guy_gaming"
     },
     {
@@ -68,13 +68,13 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Setup thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Setup thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-13",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "newbie_wd",
@@ -86,7 +86,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-14",
-      "body": "@newbie_wd — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@newbie_wd — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "newbie_wd"
     },
     {
@@ -120,7 +120,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "patch_day_survivor",
@@ -132,7 +132,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-17",
-      "body": "@patch_day_survivor — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@patch_day_survivor — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "patch_day_survivor"
     },
     {
@@ -206,7 +206,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Vehicles thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Vehicles thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "twitch_wd",
@@ -231,7 +231,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Support",
       "role": "moderator",
       "date": "2026-09-25",
-      "body": "@solo_q_wd — walk through the Vehicles checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
+      "body": "@solo_q_wd — walk through the Vehicles checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
       "replyToAuthor": "solo_q_wd"
     },
     {
@@ -258,7 +258,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-15",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "defender_hater",
@@ -341,7 +341,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-16",
-      "body": "@filterking — walk through the Combat checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page.",
+      "body": "@filterking — walk through the Combat checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page.",
       "replyToAuthor": "filterking"
     }
   ],
@@ -350,7 +350,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Status thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Status thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "patch_day_survivor",
@@ -375,7 +375,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Support",
       "role": "moderator",
       "date": "2026-09-13",
-      "body": "@filterking — walk through the Status checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
+      "body": "@filterking — walk through the Status checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
       "replyToAuthor": "filterking"
     }
   ],
@@ -461,7 +461,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-14",
-      "body": "@filterking — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@filterking — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "filterking"
     }
   ],
@@ -470,7 +470,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Pricing thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Pricing thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "ViktorNorth",
@@ -562,13 +562,13 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Review thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Review thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-13",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "ghostloot",
@@ -688,7 +688,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -850,7 +850,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "IT_guy_gaming",
@@ -862,7 +862,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-23",
-      "body": "@IT_guy_gaming — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@IT_guy_gaming — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "IT_guy_gaming"
     },
     {
@@ -914,7 +914,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-15",
-      "body": "@ridge_runner — walk through the Aimbot checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page.",
+      "body": "@ridge_runner — walk through the Aimbot checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page.",
       "replyToAuthor": "ridge_runner"
     },
     {
@@ -936,7 +936,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Aimbot thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "PMC_walker",
@@ -994,7 +994,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-20",
-      "body": "@newbie_wd — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@newbie_wd — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "newbie_wd"
     },
     {
@@ -1022,7 +1022,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-19",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "filterking",
@@ -1068,7 +1068,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-15",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "duo_six",
@@ -1099,7 +1099,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Support",
       "role": "moderator",
       "date": "2026-09-13",
-      "body": "@impatient_one — walk through the ESP checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
+      "body": "@impatient_one — walk through the ESP checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
       "replyToAuthor": "impatient_one"
     },
     {
@@ -1200,7 +1200,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -1280,7 +1280,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -1298,7 +1298,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-14",
-      "body": "@defender_hater — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@defender_hater — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "defender_hater"
     },
     {
@@ -1335,7 +1335,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Support",
       "role": "moderator",
       "date": "2026-09-20",
-      "body": "@ViktorNorth — walk through the ESP checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
+      "body": "@ViktorNorth — walk through the ESP checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
       "replyToAuthor": "ViktorNorth"
     }
   ],
@@ -1350,7 +1350,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-19",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "filterking",
@@ -1390,7 +1390,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -1522,7 +1522,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this ESP thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "capslock_warrior",
@@ -1691,7 +1691,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-26",
-      "body": "@Kestrel_09 — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@Kestrel_09 — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "Kestrel_09"
     },
     {
@@ -1718,7 +1718,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Vehicles thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Vehicles thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "LenaWD",
@@ -1730,7 +1730,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-23",
-      "body": "@LenaWD — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@LenaWD — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "LenaWD"
     },
     {
@@ -1776,7 +1776,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-19",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "defender_hater",
@@ -1834,7 +1834,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Vehicles thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Vehicles thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "IT_guy_gaming",
@@ -1996,7 +1996,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Radar thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Radar thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "IT_guy_gaming",
@@ -2112,7 +2112,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Radar thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Radar thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -2130,7 +2130,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-26",
-      "body": "@softpeek — loading while status shows Updating will fail every time. Wait until cheatsforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
+      "body": "@softpeek — loading while status shows Updating will fail every time. Wait until cheatforwardogs.net lists Active, fully exit the game, then run the loader once. No menu toggles fix a mismatched build.",
       "replyToAuthor": "softpeek"
     },
     {
@@ -2268,7 +2268,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Misc thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Misc thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -2360,7 +2360,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Misc thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Misc thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "patch_day_survivor",
@@ -2400,7 +2400,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-15",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "defender_hater",
@@ -2458,7 +2458,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Windows thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Windows thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
@@ -2489,7 +2489,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Support",
       "role": "moderator",
       "date": "2026-09-16",
-      "body": "@capslock_warrior — walk through the Windows checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
+      "body": "@capslock_warrior — walk through the Windows checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
       "replyToAuthor": "capslock_warrior"
     }
   ],
@@ -2529,7 +2529,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Support",
       "role": "moderator",
       "date": "2026-09-28",
-      "body": "@ridge_runner — walk through the Antivirus checklist in the opening post, confirm Active on cheatsforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
+      "body": "@ridge_runner — walk through the Antivirus checklist in the opening post, confirm Active on cheatforwardogs.net, then retry with a saved config. If the loader still closes instantly, open Support with a screenshot of your status page. (Follow-up #2 — still locked; use Support for account-specific issues.)",
       "replyToAuthor": "ridge_runner"
     },
     {
@@ -2550,13 +2550,13 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Hotkeys thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Hotkeys thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-13",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "solo_q_wd",
@@ -2608,13 +2608,13 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-11",
-      "body": "Editor: this Support thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Support thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "Forum Moderator",
       "role": "moderator",
       "date": "2026-09-17",
-      "body": "Moderator reminder: if status shows Updating on cheatsforwardogs.net, settings changes here will not fix inject failures — wait for Active."
+      "body": "Moderator reminder: if status shows Updating on cheatforwardogs.net, settings changes here will not fix inject failures — wait for Active."
     },
     {
       "author": "newbie_wd",
@@ -2660,7 +2660,7 @@ export const FORUM_REPLIES: Record<string, ForumReply[]> = {
       "author": "Wardogs Editor",
       "role": "editor",
       "date": "2026-09-08",
-      "body": "Editor: this Status thread is locked read-only. Steps match the live Wardogs menu on cheatsforwardogs.net — confirm Active before you queue."
+      "body": "Editor: this Status thread is locked read-only. Steps match the live Wardogs menu on cheatforwardogs.net — confirm Active before you queue."
     },
     {
       "author": "m4rtin.l",

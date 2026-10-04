@@ -1,5 +1,5 @@
 export const SUPPORT_INTRO =
-  'Support for Wardogs cheat buyers on cheatsforwardogs.net — Discord help, loader setup, Active status, aimbot/ESP/radar config, and delivery after purchase.'
+  'Support for Wardogs cheat buyers on cheatforwardogs.net — Discord help, loader setup, Active status, aimbot/ESP/radar config, and delivery after purchase.'
 
 export const SUPPORT_HIGHLIGHTS = [
   {
@@ -23,7 +23,7 @@ export const SUPPORT_FAQ = [
   },
   {
     q: 'How do I contact support?',
-    a: 'Join the Wardogs cheat Discord linked after purchase or open your order on cheatsforwardogs.net. Include a status screenshot (Active / Updating) and whether you need load, menu, or delivery help.',
+    a: 'Join the Wardogs cheat Discord linked after purchase or open your order on cheatforwardogs.net. Include a status screenshot (Active / Updating) and whether you need load, menu, or delivery help.',
   },
   {
     q: 'Loader fails after exclusions',
@@ -35,7 +35,7 @@ export const SUPPORT_FAQ = [
   },
   {
     q: 'Delivery safety',
-    a: 'Delivery is digital after checkout on cheatsforwardogs.net. Use only that loader link. Third-party mirrors are unsupported and unsafe.',
+    a: 'Delivery is digital after checkout on cheatforwardogs.net. Use only that loader link. Third-party mirrors are unsupported and unsafe.',
   },
 ] as const
 

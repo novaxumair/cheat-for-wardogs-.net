@@ -82,7 +82,7 @@ export const FORUM_INDEX: ForumIndexEntry[] = [
   {
     "slug": "best-wardogs-cheats-review-2026",
     "title": "Wardogs Cheats Review 2026: Features, Safety & Value",
-    "excerpt": "2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on cheatsforwardogs.net.",
+    "excerpt": "2026 Wardogs cheats review — ESP clarity, aimbot tuning, vehicle radar, pricing, and loader maintenance on cheatforwardogs.net.",
     "tag": "Review"
   },
   {

@@ -1,9 +1,9 @@
 import { WD_OG } from './images'
 import { PAGE_OG } from './og'
 
-export const SITE_URL = 'https://cheatsforwardogs.net'
+export const SITE_URL = 'https://cheatforwardogs.net'
 export const SITE_NAME = 'Wardogs Cheats'
-export const SITE_HOST = 'cheatsforwardogs.net'
+export const SITE_HOST = 'cheatforwardogs.net'
 
 export const SITE_LOCALE = 'en'
 export const SITE_MARKET = 'Worldwide'
@@ -30,6 +30,8 @@ export const SITE_ABOUT = [
 export const ORGANIZATION_ALTERNATE_NAMES = [
   'Wardogs Cheats',
   'Wardogs cheats',
+  'cheatforwardogs',
+  'cheatforwardogs.net',
   'cheatsforwardogs',
   'cheatsforwardogs.net',
 ] as const

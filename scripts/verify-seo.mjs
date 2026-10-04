@@ -3,7 +3,7 @@ import { join, relative } from 'node:path'
 
 const root = join(import.meta.dirname, '..')
 const dist = join(root, 'dist')
-const site = 'https://cheatsforwardogs.net'
+const site = 'https://cheatforwardogs.net'
 const failures = []
 
 function fail(message) {
@@ -92,8 +92,8 @@ if (!forums.includes('<title>Wardogs Intel | Wardogs Cheats</title>')) {
 if (!siteTs.includes('Wardogs aimbot')) {
   fail('SITE_ABOUT must include Wardogs aimbot (6-term cap)')
 }
-if (!siteTs.includes('cheatsforwardogs.net')) {
-  fail('ORGANIZATION_ALTERNATE_NAMES must include cheatsforwardogs.net')
+if (!siteTs.includes('cheatforwardogs.net')) {
+  fail('ORGANIZATION_ALTERNATE_NAMES must include cheatforwardogs.net')
 }
 if (/name="keywords"/.test(home + product + forums)) {
   fail('Pages must not use meta keywords')
@@ -124,7 +124,7 @@ for (const [name, html] of [
   ['product', product],
   ['reviews', reviews],
 ]) {
-  if (!html.includes('"@id":"https://cheatsforwardogs.net/#product"')) {
+  if (!html.includes('"@id":"https://cheatforwardogs.net/#product"')) {
     fail(`${name}: missing shared Product ID`)
   }
 }
@@ -165,8 +165,8 @@ for (const file of files) {
   const twImage = html.match(/<meta name="twitter:image" content="([^"]+)"/)?.[1]
   const robotsMeta = html.match(/<meta name="robots" content="([^"]+)"/)?.[1]
 
-  if (!ogImage?.startsWith('https://cheatsforwardogs.net/og/') || !ogImage.endsWith('.jpg')) {
-    fail(`${page}: og:image must be https://cheatsforwardogs.net/og/*.jpg for SERP thumbnails`)
+  if (!ogImage?.startsWith('https://cheatforwardogs.net/og/') || !ogImage.endsWith('.jpg')) {
+    fail(`${page}: og:image must be https://cheatforwardogs.net/og/*.jpg for SERP thumbnails`)
   }
   if (!twImage || twImage !== ogImage) {
     fail(`${page}: twitter:image must match og:image`)
@@ -221,8 +221,8 @@ if (
 const sitemap = readFileSync(join(dist, 'sitemap.xml'), 'utf8')
 if (sitemap.includes('<sitemapindex')) fail('sitemap.xml must be a single urlset, not an index')
 if (/forums\/(instructions|how-to-load)/.test(sitemap)) fail('Retired forum remains in sitemap.xml')
-if (!sitemap.includes('https://cheatsforwardogs.net/')) {
-  fail('sitemap.xml must use https://cheatsforwardogs.net URLs')
+if (!sitemap.includes('https://cheatforwardogs.net/')) {
+  fail('sitemap.xml must use https://cheatforwardogs.net URLs')
 }
 if (sitemap.includes('xmlns:video=') || sitemap.includes('<video:')) {
   fail('sitemap must not use video extension (GSC read errors)')
@@ -287,10 +287,10 @@ if (!existsSync(join(dist, 'robots.txt'))) fail('dist/robots.txt is missing')
 if (!existsSync(join(dist, '_routes.json'))) fail('dist/_routes.json is missing')
 
 const robots = readFileSync(join(dist, 'robots.txt'), 'utf8')
-if (!robots.includes('Sitemap: https://cheatsforwardogs.net/sitemap')) {
+if (!robots.includes('Sitemap: https://cheatforwardogs.net/sitemap')) {
   fail('robots.txt must point at the canonical HTTPS sitemap (/sitemap)')
 }
-if (!robots.includes('Sitemap: https://cheatsforwardogs.net/sitemap.xml')) {
+if (!robots.includes('Sitemap: https://cheatforwardogs.net/sitemap.xml')) {
   fail('robots.txt must also list /sitemap.xml for Search Console submissions')
 }
 if (!robots.includes('Allow: /sitemap')) {
@@ -352,6 +352,9 @@ if (!redirects.includes('/buy-wardogs-cheats')) {
 }
 if (!redirects.includes('/abi-cheats')) {
   fail('_redirects must map legacy /abi-cheats to /wardogs-cheats')
+}
+if (!redirects.includes('cheatsforwardogs.net')) {
+  fail('_redirects must 301 legacy cheatsforwardogs.net hostname to cheatforwardogs.net')
 }
 if (/^\/wardogs-cheats\s+\/wardogs-cheats\s/m.test(redirects)) {
   fail('_redirects must not 301 /wardogs-cheats to itself (redirect loop)')
