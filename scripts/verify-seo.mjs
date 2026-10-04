@@ -307,8 +307,8 @@ if (!robots.includes('User-agent: Googlebot')) {
 }
 
 const routes = JSON.parse(readFileSync(join(dist, '_routes.json'), 'utf8'))
-if (!routes.include?.includes('/sitemap') || !routes.include?.includes('/sitemap.xml')) {
-  fail('_routes.json must route /sitemap and /sitemap.xml through Pages Functions')
+if (routes.include?.includes('/sitemap') || routes.include?.includes('/sitemap.xml')) {
+  fail('_routes.json must not route sitemap URLs through Pages Functions (static dist + _headers for GSC)')
 }
 for (const fn of ['functions/sitemap.js', 'functions/sitemap.xml.js']) {
   const src = readFileSync(join(root, fn), 'utf8')
@@ -316,6 +316,11 @@ for (const fn of ['functions/sitemap.js', 'functions/sitemap.xml.js']) {
     fail(`${fn} must return application/xml for Google Search Console`)
   }
   if (!src.includes('SITEMAP_XML')) fail(`${fn} missing embedded sitemap payload`)
+}
+for (const fn of ['dist/functions/sitemap.js', 'dist/functions/sitemap.xml.js']) {
+  if (!existsSync(join(root, fn))) {
+    fail(`${fn} missing — required when deploying with wrangler pages deploy dist`)
+  }
 }
 
 for (const asset of [

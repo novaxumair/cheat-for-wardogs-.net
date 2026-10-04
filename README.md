@@ -14,6 +14,8 @@ SEO targets **Wardogs cheats**, **wardogs anti cheat**, **Wardogs ESP**, **Wardo
 
 Set `SITE_URL=https://cheatforwardogs.net` when generating sitemaps outside the default build.
 
+After deploy, run `npm run verify:live-sitemap` and in [Google Search Console](https://search.google.com/search-console) submit **`https://cheatforwardogs.net/sitemap.xml`** on the **cheatforwardogs.net** property (remove any sitemap still pointing at `cheatsforwardogs.net`).
+
 ## Cloudflare Pages (Git)
 
 | Setting | Value |

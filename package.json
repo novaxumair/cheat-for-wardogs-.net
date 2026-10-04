@@ -18,6 +18,7 @@
     "prepare:logo": "node scripts/build-logo-assets.mjs",
     "fetch:game-cover": "node scripts/fetch-wardogs-game-cover.mjs",
     "verify:seo": "node scripts/verify-seo.mjs",
+    "verify:live-sitemap": "node scripts/verify-live-sitemap.mjs",
     "verify:redirects": "node scripts/verify-redirects.mjs",
     "lint": "oxlint",
     "postinstall": "node scripts/patch-wrangler-bin.mjs"

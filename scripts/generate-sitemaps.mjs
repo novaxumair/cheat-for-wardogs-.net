@@ -2,7 +2,7 @@
  * Single sitemap at /sitemap.xml ? every indexed page URL + image entries.
  * One urlset only (never a sitemap index). 404 is excluded.
  */
-import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -456,7 +456,7 @@ const SITEMAP_FUNCTION_SOURCE = `/**
  */
 const SITEMAP_XML = __SITEMAP_JSON__;
 
-export async function onRequest() {
+function serveSitemap() {
   return new Response(SITEMAP_XML, {
     status: 200,
     headers: {
@@ -465,6 +465,14 @@ export async function onRequest() {
       'Access-Control-Allow-Origin': '*',
     },
   });
+}
+
+export async function onRequest() {
+  return serveSitemap();
+}
+
+export async function onRequestGet() {
+  return serveSitemap();
 }
 `
 
@@ -477,10 +485,22 @@ function writeSitemapFunctions(sitemap) {
   }
 }
 
+function copyFunctionsToDist(functionsDir) {
+  const distDir = join(root, 'dist')
+  if (!existsSync(distDir)) return
+  const distFunctions = join(distDir, 'functions')
+  mkdirSync(distFunctions, { recursive: true })
+  for (const name of ['sitemap.js', 'sitemap.xml.js']) {
+    cpSync(join(functionsDir, name), join(distFunctions, name))
+  }
+}
+
 function writeRoutesConfig() {
+  // Static sitemap in dist/ + public/_headers (Google Search Console). Do not route
+  // /sitemap through Functions — wrangler pages deploy dist often omits repo-root /functions.
   const routes = {
     version: 1,
-    include: ['/sitemap', '/sitemap.xml'],
+    include: [],
     exclude: [],
   }
   const json = `${JSON.stringify(routes, null, 2)}\n`
@@ -509,7 +529,9 @@ function main() {
   for (const path of sitemapPaths) {
     writeFileSync(path, sitemap, 'utf8')
   }
+  const functionsDir = join(root, 'functions')
   writeSitemapFunctions(sitemap)
+  copyFunctionsToDist(functionsDir)
   writeRoutesConfig()
   const distDir = join(root, 'dist')
   writeFileSync(
